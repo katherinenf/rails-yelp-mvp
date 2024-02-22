@@ -1,0 +1,6 @@
+<div class=m-3>
+  <h1> <%= @restaurant.name %> </h1>
+  <h3><%= @restaurant.address %> <strong><%= @restaurant.phone_number %></strong></h3>
+  <%= link_to "Back", restaurants_path %>
+  <%= link_to "Review", new_restaurant_review_path(@restaurant) %>
+</div>
