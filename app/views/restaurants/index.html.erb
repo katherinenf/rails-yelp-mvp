@@ -1,10 +1,18 @@
 <div class=m-3>
-  <h1> All the Restaurants </h1>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  Restaurants
+</div>
   <ul>
     <% @restaurants.each do |restaurant|  %>
-      <h4><%= link_to restaurant.name, restaurant_path(restaurant)%></h4>
-      <p><%= restaurant.address %> <strong><%= restaurant.phone_number %></strong></p>
+      <div class="card-product">
+      <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+      <div class="card-product-infos">
+        <h2><%= link_to restaurant.name, restaurant_path(restaurant)%></h2>
+        <p><%= restaurant.address %> <strong><%= restaurant.phone_number %></strong></p>
+      </div>
+    </div>
     <% end %>
   </ul>
-  <%= link_to "Add", new_restaurant_path %>
+
+  <%= link_to "Add", new_restaurant_path, class: "btn btn-primary" %>
 </div>
